@@ -1,6 +1,6 @@
 ---
 import { getLanguageFromURL } from '../../languages';
-import { SIDEBAR } from '../../consts';
+import { ADMINBAR } from '../../consts';
 
 type Props = {
 	currentPage: string;
@@ -11,7 +11,7 @@ const currentPageMatch = currentPage.endsWith('/')
 	? currentPage.slice(1, -1)
 	: currentPage.slice(1);
 const langCode = getLanguageFromURL(currentPage);
-const sidebar = SIDEBAR[langCode];
+const sidebar = ADMINBAR[langCode];
 ---
 
 <nav aria-labelledby="grid-left">
@@ -20,7 +20,7 @@ const sidebar = SIDEBAR[langCode];
 	        <div class="nav-group">
 	            <ul>
 					<li class="nav-link">
-	                    <a href="/gameplay" aria-current=false>
+	                    <a href="/gameplay" aria-current="page">
 	                        Admin
                         </a>
                     </li>

@@ -39,19 +39,99 @@ export type Sidebar = Record<
 >;
 export const SIDEBAR: Sidebar = {
 	en: {
-		'Admin': [
-			{ text: 'Starter Server', link: 'en/starter-server' },
-			{ text: 'Getting Players', link: 'en/getting-players' },
-			{ text: 'Choosing Server Software', link: 'en/server-software' },
-			{ text: 'Recommended Plugins', link: 'en/recommended-plugins' },
-			{ text: 'Server Security Tips', link: 'en/server-security' },
+		'Mod': [
+			{ text: 'Growing a Community', link: '' },
+			{ text: 'Managing a Community', link: '' }
 		],
-		// 'Develop': [
-		//
-		// ],
+		'Admin': [
+			{ text: 'Introduction', link: '' },
+			{ text: 'Getting Started', link: '' },
+			{ text: 'Designing Gameplay', link: '' },
+		],
+		'Dev': [
+			{ text: 'Introduction', link: '' },
+			{ text: 'Getting Started', link: '' },
+			{ text: 'Advanced', link: '' }
+		],
 		'Host': [
-			{ text: 'Choosing A Server Host', link: 'en/server-hosting' },
-			{ text: 'Improving Server Performance', link: 'en/server-performance' },
+			{ text: 'Introduction', link: '' },
+			{ text: 'Using a Host', link: '' },
+			{ text: 'Self Hosting', link: '' },
+			{ text: 'Hosting for Others', link: '' },
+		],
+		'Other / Misc': [
+			{ text: 'TBD', link: '' },
+		],
+	},
+};
+
+export const MODBAR: Sidebar = {
+	en: {
+		'Growing a Community': [
+			{ text: 'Attracting Players', link: '' },
+			{ text: 'Retaining Players', link: '' },
+		],
+		'Managing a Community': [
+			{ text: 'Creating Rules', link: '' },
+			{ text: 'Enforcing Your Rules', link: '' },
+			{ text: 'Recruiting Staff', link: '' },
+			{ text: 'Managing Staff', link: '' },
+		],
+	},
+};
+
+export const ADMINBAR: Sidebar = {
+	en: {
+		'Introduction': [
+			{ text: 'Servers in General', link: '' },
+			{ text: 'The Minecraft Ecosystem', link: '' },
+		],
+		'Getting Started': [
+			{ text: 'Setting up Your Server', link: '' }, // redirect to host subsite.
+			{ text: 'Configuring Plugins', link: '' },
+			{ text: 'Setting up Permissions', link: '' },
+		],
+		'Designing Gameplay': [
+			{ text: 'Standard Gamemodes', link: '' },
+			{ text: 'Gameplay Objectives', link: '' },
+			{ text: 'Virtual Economics', link: '' },
+		],
+	},
+};
+
+export const DEVBAR: Sidebar = {
+	en: {
+		'Introduction': [
+			{ text: 'Learning Java', link: '' },
+			{ text: 'The Minecraft Ecosystem', link: '' },
+			{ text: 'Scripts vs. Plugins', link: '' },
+		],
+		'Getting Started': [
+			{ text: 'Making a Minecraft Plugin', link: '' },
+		],
+		'Advanced': [
+			{ text: 'A Guide to NMS', link: '' },
+			{ text: 'Making Paper Pull Requests', link: '' },
+		],
+	},
+};
+
+export const HOSTBAR: Sidebar = {
+	en: {
+		'General Information': [
+			{ text: 'Do You Need a Host?', link: '' },
+			{ text: 'Server Security Tips', link: '' },
+			{ text: 'Improving Server Performance', link: '' },
+		],	
+		'Using a Host': [
+			{ text: 'Choosing A Server Host', link: '' },
+			{ text: 'Starting Your Server', link: '' },
+		],
+		'Self Hosting': [
+			{ text: 'A Guide to Self Hosting', link: '' },
+			{ text: 'Deploying a Minecraft Server', link: '' },
+		],
+		'Hosting for Others': [
 		],
 	},
 };
