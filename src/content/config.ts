@@ -1,8 +1,6 @@
 import { defineCollection, z } from 'astro:content';
 import { SITE } from '../consts';
 
-export const collections = { docs };
-
 const admin = defineCollection({
   type: 'content',
   schema: z.object({
@@ -37,6 +35,3 @@ const mod = defineCollection({
 });
 
 export const collections = { admin, dev, host, mod };
-
-
-config.ts
