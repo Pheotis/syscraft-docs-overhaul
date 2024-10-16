@@ -6,7 +6,22 @@ import SidebarToggle from './SidebarToggle';
 import LanguageSelect from './LanguageSelect';
 import Search from './Search';
 
-import Logo from './Logo.astro';
+// TODO:
+// For some reason, this crashes the default renderer used by astro.
+// If this can be made to work, it would be far cleaner than the current solution.
+
+const collectionLogos = {
+    mod: () => import('./modLogo.astro'),
+    admin: () => import('./adminLogo.astro'),
+    dev: () => import('./devLogo.astro'),
+    host: () => import('./hostLogo.astro'),
+};
+
+const collectionName = (new URL(Astro.request.url).pathname).match("^/([a-zA-Z]*)/")[1] || 'default';
+const logoImport = collectionLogos[collectionName] || (() => import('./Logo.astro'));
+
+const Logo = await logoImport();
+
 
 type Props = {
 	currentPage: string;
