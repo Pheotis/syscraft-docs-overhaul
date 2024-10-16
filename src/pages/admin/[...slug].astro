@@ -1,0 +1,22 @@
+---
+import { CollectionEntry, getCollection } from 'astro:content';
+import AdminLayout from '../../layouts/AdminLayout.astro';
+
+export async function getStaticPaths() {
+	const admin = await getCollection('admin');
+	return admin.map((entry) => ({
+		params: {
+			slug: entry.slug,
+		},
+		props: entry,
+	}));
+}
+type Props = CollectionEntry<'admin'>;
+
+const post = Astro.props;
+const { Content, headings } = await post.render();
+---
+
+<AdminLayout headings={headings} {...post.data}>
+	<Content />
+</AdminLayout>
