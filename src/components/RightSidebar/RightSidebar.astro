@@ -11,17 +11,49 @@ type Props = {
 
 const { currentPage, currentFile, headings, githubEditUrl } = Astro.props;
 
+// TODO: This is a poory coded, ugly, and stupid workaround.
+const fixedCurrentFile = currentFile.replace(/\/(mod|admin|dev|host)(?=\/(mod|admin|dev|host)(\/|.))/gm, "");
+
+let finalCurrentFile = fixedCurrentFile
+let homePage = false
+switch (fixedCurrentFile) {
+    case 'src/content/admin.mdx':
+        finalCurrentFile = "src/pages/admin/index.astro";
+        homePage = true;
+        break;
+    case 'src/content/mod.mdx':
+        finalCurrentFile = "src/pages/mod/index.astro";
+        homePage = true;
+        break;
+    case 'src/content/host.mdx':
+        finalCurrentFile = "src/pages/host/index.astro";
+        homePage = true;
+        break;
+    case 'src/content/dev.mdx':
+        finalCurrentFile = "src/pages/dev/index.astro";
+        homePage = true;
+        break;
+    case 'src/content/docs.mdx':
+        finalCurrentFile = "src/pages/index.astro";
+        homePage = true;
+        break;
+    default:
+        finalCurrentFile = fixedCurrentFile;
+ }
+
+import { GITHUB_EDIT_URL } from '../../consts';
+const fixedGithubEditURL = GITHUB_EDIT_URL + finalCurrentFile;
+
 currentPage.endsWith('/')
 	? currentPage.slice(1, -1)
 	: currentPage.slice(1);
 
-const homePage = currentPage === '/';
 ---
 
 <nav class="sidebar-nav" aria-labelledby="grid-right">
 	<div class="sidebar-nav-inner">
 		{!homePage && <TableOfContents client:media="(min-width: 50em)" headings={headings} />}
-		{!homePage && <Contributors path={currentFile} editHref={homePage ? null : githubEditUrl} />}
+		{!homePage && <Contributors path={fixedCurrentFile} editHref={homePage ? null : fixedGithubEditURL} />}
 		<MoreMenu currentPage={currentPage} path={currentFile} />
 	</div>
 </nav>
