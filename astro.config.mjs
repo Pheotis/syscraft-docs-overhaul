@@ -12,5 +12,5 @@ export default defineConfig({
   preact(),
   // Enable React for the Algolia search component.
   react(), sitemap(), robotsTxt(), mdx()],
-  site: `https://syscraft.dev`
+  site: `https://sysdraft.pheotis.net`
 });
