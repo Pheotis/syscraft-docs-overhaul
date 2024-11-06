@@ -40,22 +40,22 @@ export type Sidebar = Record<
 export const SIDEBARMOD: Sidebar = {
 	en: {
 		'Growing a community': [
-			{ text: 'Player retention', link: 'javascript:void(0)' },
-                        { text: 'Player acquisition', link: 'javascript:void(0)' },
+			{ text: 'Player retention', link: 'mod/en/growth-retention)' },
+                        { text: 'Player acquisition', link: 'mod/en/growth-acquisition' },
 		],
 		'Engaging a community': [
-			{ text: 'Community interaction', link: 'javascript:void(0)' },
+			{ text: 'Community interaction', link: 'mod/en/engagement-interaction' },
 		],
 		'Staffing a server': [
-			{ text: 'Early days', link: 'javascript:void(0)' },
-                        { text: 'Developing processes', link: 'javascript:void(0)' },
-                        { text: 'Scaling processes', link: 'javascript:void(0)' },
+			{ text: 'Early days', link: 'mod/en/staffing-small' },
+                        { text: 'Developing processes', link: 'mod/en/staffing-medium' },
+                        { text: 'Scaling processes', link: 'mod/en/staffing-large' },
 		],
 		'Supervising a community': [
-			{ text: 'On rules', link: 'javascript:void(0)' },
-                        { text: 'Hard skills', link: 'javascript:void(0)' },
-                        { text: 'Soft skills', link: 'javascript:void(0)' },
-                        { text: 'Emergencies', link: 'javascript:void(0)' },
+			{ text: 'On rules', link: 'mod/en/supervising-rules' },
+                        { text: 'Hard skills', link: 'mod/en/supervising-technical' },
+                        { text: 'Soft skills', link: 'mod/en/supervising-social' },
+                        { text: 'Emergencies', link: 'mod/en/supervising-emergencies' },
 		],
 	},
 };
@@ -63,21 +63,20 @@ export const SIDEBARMOD: Sidebar = {
 export const SIDEBARHOST: Sidebar = {
 	en: {
 		'General Information': [
-			{ text: 'VPS vs Dedicated', link: 'javascript:void(0)' },
-                        { text: 'NAT vs Ipv4 vs Ipv6', link: 'javascript:void(0)' },
-                        { text: 'DNS & websites', link: 'javascript:void(0)' },
-                        { text: 'DOS mitigation', link: 'javascript:void(0)' },
+			{ text: 'VPS vs Dedicated', link: 'host/en/general-virtualization' },
+                        { text: 'Internet Protocol', link: 'host/en/general-protocol' },
+                        { text: 'DOS mitigation', link: 'host/en/general-hardening' },
 		],
 		'Finding a host': [
-			{ text: 'Getting ready', link: 'javascript:void(0)' },
-                        { text: 'Typical bottlenecks', link: 'javascript:void(0)' },
-                        { text: 'Types of hosting', link: 'javascript:void(0)' },
-                        { text: 'Avoiding summerhosts', link: 'javascript:void(0)' },
+			{ text: 'Getting ready', link: 'host/en/shopping-preparation' },
+                        { text: 'Typical bottlenecks', link: 'host/en/shopping-bottlenecks' },
+                        { text: 'Types of hosting', link: 'host/en/shopping-products' },
+                        { text: 'Avoiding summerhosts', link: 'host/en/shopping-summerhosts' },
 		],
 		'Using your host': [
-			{ text: 'Self host', link: 'javascript:void(0)' },
-                        { text: 'Unmanaged / colo', link: 'javascript:void(0)' },
-                        { text: 'Managed', link: 'javascript:void(0)' },
+			{ text: 'Self host', link: 'host/en/usage-selfhost' },
+                        { text: 'Unmanaged / colo', link: 'host/en/usage-managed' },
+                        { text: 'Managed', link: 'host/en/usage-unmanaged' },
 		],
 	},
 };
@@ -85,24 +84,23 @@ export const SIDEBARHOST: Sidebar = {
 export const SIDEBARDEV: Sidebar = {
 	en: {
 		'Prerequisites': [
-			{ text: 'What is plugin development?', link: 'javascript:void(0)' },
-                        { text: 'Learning java (some tips)', link: 'javascript:void(0)' },
-                        { text: 'Generally applicable concepts', link: 'javascript:void(0)' },
-                        { text: 'Setting up a workspace', link: 'javascript:void(0)' },
+                        { text: 'Learning java', link: 'dev/en/prerequisites-java' },
+                        { text: 'Creating your work environment', link: 'dev/en/prerequisites-ide' },
+                        { text: 'What are Minecraft plugins?', link: 'dev/en/prerequisites-minecraft' },
 		],
 		'Basic plugin development': [
-			{ text: 'Choosing your platform', link: 'javascript:void(0)' },
-                        { text: 'Spigot/paper', link: 'javascript:void(0)' },
-                        { text: 'Sponge', link: 'javascript:void(0)' },
-                        { text: 'Minestom', link: 'javascript:void(0)' },
-                        { text: 'On Documentation', link: 'javascript:void(0)' },
+			{ text: 'Choosing your platform', link: 'dev/en/basics-platforms' },
+                        { text: 'Spigot/paper', link: 'dev/en/basics-bukkit' },
+                        { text: 'Sponge', link: 'dev/en/basics-sponge' },
+                        { text: 'Minestom', link: 'dev/en/basics-minestom' },
+                        { text: 'Solving problems', link: 'dev/en/basics-debugging' },
+                        { text: 'Best practices', link: 'dev/en/basics-practices' },
 		],
 		'Advanced concepts': [
-			{ text: 'Reflecting on NMS', link: 'javascript:void(0)' },
-                        { text: 'Kotlin, mixins, etc.', link: 'javascript:void(0)' },
-                        { text: 'Performance', link: 'javascript:void(0)' },
-                        { text: 'Testing', link: 'javascript:void(0)' },
-                        { text: 'Contributing upstream', link: 'javascript:void(0)' },
+			{ text: 'Reflecting and NMS', link: 'dev/en/advanced-reflection' },
+                        { text: 'Performance', link: 'dev/en/advanced-performance' },
+                        { text: 'Testing', link: 'dev/en/advanced-testing' },
+                        { text: 'Contributing upstream', link: 'dev/en/advanced-upstream' },
 		],
 	},
 };
@@ -147,8 +145,17 @@ export const SIDEBARADMIN: Sidebar = {
 
 export const SIDEBAR: Sidebar = {
 	en: {
-		'Generic': [
-			{ text: 'placeholder', link: 'javascript:void(0)' },
+		'Guides': [
+			{ text: 'On hosting', link: 'host' },
+                        { text: 'On administrating', link: 'admin' },
+                        { text: 'On developing', link: 'dev' },
+                        { text: 'On moderating', link: 'mod' },
+		],
+		'Resources': [
+			{ text: 'For hosts', link: 'host' },
+                        { text: 'For admins', link: 'admin' },
+                        { text: 'For devs', link: 'dev' },
+                        { text: 'For mods', link: 'mod' },
 		],
 	},
 };
