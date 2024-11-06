@@ -152,10 +152,13 @@ export const SIDEBAR: Sidebar = {
                         { text: 'On moderating', link: 'mod' },
 		],
 		'Resources': [
-			{ text: 'For hosts', link: 'host' },
-                        { text: 'For admins', link: 'admin' },
-                        { text: 'For devs', link: 'dev' },
-                        { text: 'For mods', link: 'mod' },
+			{ text: 'For hosts', link: 'host/en/resources' },
+                        { text: 'For admins', link: 'admin/en/resources' },
+                        { text: 'For devs', link: 'dev/en/resources' },
+                        { text: 'For mods', link: 'mod/en/resources' },
+		],
+                'Syscraft': [
+                        { text: 'Discord server', link: 'https://discord.gg/Dx6SSkx' },
 		],
 	},
 };
